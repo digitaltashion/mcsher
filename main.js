@@ -11,18 +11,22 @@ $(document).ready(function () {
     });
 
     // --- Navbar Scroll Effect ---
-    // Fixed height logic for initial state
     const navbar = $('#navbar');
-    if ($(window).scrollTop() <= 50) {
-        navbar.addClass('py-6');
+
+    function updateNavbar() {
+        if ($(window).scrollTop() > 50) {
+            navbar.addClass('py-3 shadow-lg').removeClass('py-4 md:py-6 border-white/10');
+        } else {
+            navbar.removeClass('py-3 shadow-lg').addClass('py-4 md:py-6 border-white/10');
+        }
     }
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            navbar.addClass('bg-dark/90 backdrop-blur-md shadow-lg py-3').removeClass('py-6');
-        } else {
-            navbar.removeClass('bg-dark/90 backdrop-blur-md shadow-lg py-3').addClass('py-6');
-        }
+    // Run immediately on load to fix the initial state issue
+    updateNavbar();
+
+    // Bind to both scroll and resize events
+    $(window).on('scroll resize', function () {
+        updateNavbar();
     });
 
 
