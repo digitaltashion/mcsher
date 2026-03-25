@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Stoneline | Premium Tile & Marble Work</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN Script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a', /* Deep slate for construction professional look */
+                        secondary: '#1e293b',
+                        gold: '#eab308', /* Construction yellow/gold */
+                        'gold-light': '#fef08a',
+                        white: '#FFFFFF',
+                        gray: {
+                            800: '#334155',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .font-heading {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        .btn-gold {
+            background-color: #eab308;
+            color: #0f172a;
+        }
+
+        .btn-gold:hover {
+            background-color: #ffffff;
+            color: #0f172a;
+        }
+
+        .text-gold {
+            color: #eab308 !important;
+        }
+
+        .border-gold {
+            border-color: #eab308 !important;
+        }
+
+        .bg-gold {
+            background-color: #eab308 !important;
+        }
+
+        /* Custom Accordion overrides for dark theme */
+        .accordion-button {
+            background-color: #1e293b !important;
+            color: white !important;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            box-shadow: none !important;
+            border-radius: 4px !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #eab308 !important;
+            color: #0f172a !important;
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            filter: none;
+        }
+
+        .accordion-item {
+            background-color: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 0.5rem;
+            border-radius: 4px !important;
+            overflow: hidden;
+        }
+
+        .accordion-body {
+            background-color: #0f172a !important;
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* SVG Logo Animation */
+        @keyframes draw-logo {
+            from {
+                stroke-dashoffset: 200;
+                fill: transparent;
+            }
+
+            50% {
+                fill: transparent;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+                fill: currentColor;
+            }
+        }
+
+        .animate-logo path.draw-path {
+            stroke-dasharray: 200;
+            animation: draw-logo 2.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white overflow-x-hidden relative font-sans antialiased selection:bg-gold selection:text-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-3 md:py-4 bg-dark/95 backdrop-blur-md border-b border-white/10"
+        id="navbar">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center relative z-50">
+            <a href="#"
+                class="text-2xl font-heading font-black tracking-widest relative z-50 flex items-center gap-4 group">
+                <img src="logo.png" alt="MS Stoneline Logo"
+                    class="h-10 md:h-12 w-auto object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span
+                        class="mt-1 leading-none text-white transition-colors group-hover:text-gold text-xl md:text-2xl tracking-[0.15em]">MS
+                        STONELINE</span>
+                    <!-- <span
+                        class="hidden md:block text-[0.65rem] tracking-[0.3em] font-sans text-gray-400 font-bold uppercase mt-1">Construction
+                        & Marble</span> -->
+                </div>
+            </a>
+
+            <div class="hidden lg:flex space-x-10 uppercase text-xs tracking-[0.1em] font-bold items-center">
+                <a href="#home" class="hover:text-gold transition-colors duration-300">Home</a>
+                <a href="#about" class="hover:text-gold transition-colors duration-300">About</a>
+                <a href="#services" class="hover:text-gold transition-colors duration-300">Services</a>
+                <a href="#why-us" class="hover:text-gold transition-colors duration-300">Why Us</a>
+                <a href="#projects" class="hover:text-gold transition-colors duration-300">Projects</a>
+                <a href="#faq" class="hover:text-gold transition-colors duration-300">FAQ</a>
+                <a href="#contact"
+                    class="btn-gold px-6 py-2.5 ml-4 rounded-sm tracking-widest hover:bg-white transition-all duration-300 shadow-[0_4px_14px_rgba(234,179,8,0.3)] hover:shadow-[0_4px_20px_rgba(255,255,255,0.4)]">Get
+                    Quote</a>
+            </div>
+
+            <button class="lg:hidden text-2xl relative z-50 focus:outline-none text-gold" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-slate-900/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8"
+        id="mobile-menu">
+        <a href="#home"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">Home</a>
+        <a href="#about"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">About</a>
+        <a href="#services"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">Services</a>
+        <a href="#why-us"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">Why
+            Us</a>
+        <a href="#projects"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">Projects</a>
+        <a href="#faq"
+            class="text-2xl font-heading font-bold mobile-link hover:text-gold transition-colors uppercase tracking-widest">FAQ</a>
+        <a href="#contact"
+            class="text-2xl font-heading font-bold mobile-link text-gold transition-colors uppercase tracking-widest">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-32 md:py-40">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center parallax-bg scale-105"
+            style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop');">
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark/40 opacity-95"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-16"
+            data-aos="fade-up" data-aos-duration="1200">
+            <div class="md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start pt-12 md:pt-0">
+                <div
+                    class="inline-block border border-gold/50 px-6 py-2 mb-8 rounded-sm backdrop-blur-sm bg-black/40 shadow-lg">
+                    <p class="text-xs sm:text-sm tracking-[0.3em] font-heading uppercase text-gold font-bold">Premium
+                        Engineering & Construction</p>
+                </div>
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black mb-8 tracking-tight leading-[1.1] text-white uppercase drop-shadow-2xl">
+                    Flawless <br><span class="text-gold">Marble & Tile</span><br>Craftsmanship.
+                </h1>
+                <p
+                    class="text-gray-200 w-full max-w-2xl text-base sm:text-lg lg:text-xl font-light leading-relaxed border-l-4 border-gold pl-6 py-2 bg-gradient-to-r from-gold/10 to-transparent mb-10 text-left">
+                    Elevating residential and commercial spaces with premium tile fitting and marble work. Experience
+                    the perfect blend of structural integrity, master craftsmanship, and timeless elegance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
+                    <a href="#contact"
+                        class="btn-gold inline-block px-10 py-4 text-sm tracking-widest uppercase font-bold transition-all duration-300 shadow-[0_0_15px_rgba(234,179,8,0.3)] hover:-translate-y-1">
+                        Get a Free Estimate <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#projects"
+                        class="inline-block border border-white/30 px-10 py-4 text-sm tracking-widest uppercase font-bold hover:bg-white hover:text-dark transition-all duration-300 backdrop-blur-sm hover:-translate-y-1">
+                        View Our Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-2/5 hidden md:flex justify-end relative">
+                <div class="w-80 h-96 border-4 border-gold absolute -top-8 -right-8 opacity-30 z-0"></div>
+                <img src="mc sher.png"
+                    class="w-80 object-cover h-96 rounded-sm shadow-2xl relative z-10 border border-white/10"
+                    alt="Construction Architect">
+                <div class="absolute -bottom-10 left-10 bg-dark p-6 border-l-4 border-gold shadow-2xl z-20">
+                    <h4 class="font-heading font-bold text-2xl text-white">#1 Rated</h4>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">In DHA, Lahore</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section
+        class="py-16 md:py-24 bg-secondary border border-white/5 relative z-30 mt-20 ml-20 mr-20  lg:max-w-7xl rounded-lg shadow-2xl">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="px-4 py-4 md:px-6" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-gem text-5xl text-gold mb-6 drop-shadow-md"></i>
+                    <h3 class="text-xl md:text-2xl font-heading font-bold mb-3 uppercase tracking-wide">Premium
+                        Materials</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">We source top-grade marble, granite, and
+                        tiles worldwide to ensure durability and a luxurious finish for your residential or commercial
+                        space.</p>
+                </div>
+                <div class="px-4 py-4 md:px-6" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-hammer text-5xl text-gold mb-6 drop-shadow-md"></i>
+                    <h3 class="text-xl md:text-2xl font-heading font-bold mb-3 uppercase tracking-wide">Expert
+                        Craftsmanship</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">Our team comprises highly skilled civil
+                        engineers and master masons with decades of combined experience in precise structural fitting.
+                    </p>
+                </div>
+                <div class="px-4 py-4 md:px-6" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-clock-rotate-left text-5xl text-gold mb-6 drop-shadow-md"></i>
+                    <h3 class="text-xl md:text-2xl font-heading font-bold mb-3 uppercase tracking-wide">Timely Execution
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed font-light">We value your time. Our project
+                        management ensures standard compliance, strict quality control, and on-time completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Detailed) -->
+    <section id="about" class="py-24 bg-dark">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative" data-aos="fade-right">
+                    <img src="mc sher.png" class="w-full h-auto rounded-sm shadow-2xl filter brightness-75"
+                        alt="Engineers working">
+                    <div
+                        class="absolute -bottom-8 -right-8 w-48 h-48 bg-gold p-6 flex flex-col justify-center items-center text-dark text-center shadow-xl">
+                        <i class="fa-solid fa-award text-4xl mb-2"></i>
+                        <h4 class="font-heading font-black text-3xl">100%</h4>
+                        <p class="uppercase tracking-widest text-xs font-bold leading-tight mt-1">
+                            Satisfaction<br>Guaranteed</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Who We Are</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight mb-8">Pioneering
+                        Excellence in Construction & Tiling.</h2>
+                    <p class="text-gray-300 text-lg font-light leading-relaxed mb-6">
+                        MS Stoneline is a premier civil engineering firm specializing in high-end tile installation and
+                        advanced marble fitting. Located in the heart of DHA Lahore, we transform raw stones into
+                        magnificent spaces.
+                    </p>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">
+                        Whether it's a sprawling commercial plaza, a high-end restaurant, or your luxurious private
+                        residence, our engineering background dictates that every slab is cut with precision, every
+                        surface is leveled immaculately, and every polish reflects perfection. We don't just lay tiles;
+                        we engineer spaces that stand the test of time.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-4 text-gray-200"><i
+                                class="fa-solid fa-check text-gold text-xl"></i> <b>Licensed & Insured</b> Civil
+                            Engineers.</li>
+                        <li class="flex items-center gap-4 text-gray-200"><i
+                                class="fa-solid fa-check text-gold text-xl"></i> <b>Zero-Compromise</b> on Structural
+                            Integrity.</li>
+                        <li class="flex items-center gap-4 text-gray-200"><i
+                                class="fa-solid fa-check text-gold text-xl"></i> <b>Modern Equipment</b> for precise
+                            mirror polishing.</li>
+                    </ul>
+                    <a href="#contact"
+                        class="inline-block border-2 border-gold text-gold px-8 py-3 uppercase tracking-widest font-bold hover:bg-gold hover:text-dark transition-colors duration-300">Talk
+                        to an Engineer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Stats Section (Construction Layout) -->
+    <section class="py-20 bg-gold text-dark relative" id="stats-section">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center divide-x-0 lg:divide-x divide-dark/20">
+                <div data-aos="zoom-in" data-aos-delay="0">
+                    <div class="flex justify-center mb-4"><i class="fa-solid fa-calendar-days text-4xl opacity-50"></i>
+                    </div>
+                    <h3 class="text-5xl md:text-6xl font-heading font-black mb-2"><span class="counter"
+                            data-target="15">0</span>+</h3>
+                    <p class="uppercase tracking-widest text-sm font-bold opacity-80">Years Field Experience</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex justify-center mb-4"><i class="fa-solid fa-building text-4xl opacity-50"></i></div>
+                    <h3 class="text-5xl md:text-6xl font-heading font-black mb-2"><span class="counter"
+                            data-target="500">0</span>+</h3>
+                    <p class="uppercase tracking-widest text-sm font-bold opacity-80">Projects Completed</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex justify-center mb-4"><i class="fa-solid fa-users text-4xl opacity-50"></i></div>
+                    <h3 class="text-5xl md:text-6xl font-heading font-black mb-2"><span class="counter"
+                            data-target="350">0</span>+</h3>
+                    <p class="uppercase tracking-widest text-sm font-bold opacity-80">Happy Clients</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flex justify-center mb-4"><i class="fa-solid fa-hard-hat text-4xl opacity-50"></i></div>
+                    <h3 class="text-5xl md:text-6xl font-heading font-black mb-2"><span class="counter"
+                            data-target="50">0</span>+</h3>
+                    <p class="uppercase tracking-widest text-sm font-bold opacity-80">Expert Masons & Staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 relative z-10 bg-dark">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Our Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight">Core Services</h2>
+                <div class="w-24 h-2 bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="group relative bg-secondary p-10 hover:-translate-y-2 transition-transform duration-500 border-b-4 border-transparent hover:border-gold shadow-xl"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-20 h-20 bg-dark flex items-center justify-center rounded-sm mb-8 border border-white/10 group-hover:border-gold transition-colors">
+                        <i class="fa-solid fa-layer-group text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 uppercase tracking-wide">Tile Installation</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed font-light">
+                        Precision tile installation for residential and commercial floors and walls. We ensure perfect
+                        leveling, meticulous grouting, and durable adhesion. Our team works with porcelain, ceramic,
+                        vitrified, and mosaic tiles.
+                    </p>
+                    <a href="#contact"
+                        class="text-gold uppercase tracking-widest text-sm font-bold flex items-center group-hover:text-white transition-colors">
+                        Request Quote <i
+                            class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative bg-secondary p-10 hover:-translate-y-2 transition-transform duration-500 border-b-4 border-transparent hover:border-gold shadow-xl"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-20 h-20 bg-dark flex items-center justify-center rounded-sm mb-8 border border-white/10 group-hover:border-gold transition-colors">
+                        <i class="fa-solid fa-cubes text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 uppercase tracking-wide">Marble Fitting & Polish
+                    </h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed font-light">
+                        Expert marble cutting, joint-free fitting, and high-gloss mirror-finish polishing that brings
+                        out the natural beauty of the stone. We handle Italian blocks, Granite, Onyx, and local premium
+                        stones.
+                    </p>
+                    <a href="#contact"
+                        class="text-gold uppercase tracking-widest text-sm font-bold flex items-center group-hover:text-white transition-colors">
+                        Request Quote <i
+                            class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative bg-secondary p-10 hover:-translate-y-2 transition-transform duration-500 border-b-4 border-transparent hover:border-gold shadow-xl"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 bg-dark flex items-center justify-center rounded-sm mb-8 border border-white/10 group-hover:border-gold transition-colors">
+                        <i class="fa-solid fa-house-chimney-crack text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 uppercase tracking-wide">Complete Renovation</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed font-light">
+                        Civil engineering backed end-to-end flooring and wall renovation services including demolition
+                        of old structure, base preparation, material sourcing, structural design, and labor execution.
+                    </p>
+                    <a href="#contact"
+                        class="text-gold uppercase tracking-widest text-sm font-bold flex items-center group-hover:text-white transition-colors">
+                        Request Quote <i
+                            class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed "Why Choose Us" / Materials Section -->
+    <section id="why-us" class="py-24 bg-dark border-t border-white/5 relative overflow-hidden">
+        <!-- Decor pattern -->
+        <div class="absolute inset-0 bg-pattern opacity-30 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Why Choose Us</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight mb-8">The Benchmark
+                        of Reliability.</h2>
+                    <p class="text-gray-300 font-light leading-relaxed mb-8">
+                        Choosing a construction partner is a matter of trust. MS Stoneline is built on a foundation of
+                        transparency, engineering excellence, and customer-first methodology. We guarantee NO hidden
+                        costs and 100% adherence to deadlines.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-gold/10 rounded flex items-center justify-center shrink-0 border border-gold/30">
+                                <i class="fa-solid fa-calculator text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Transparent Estimation</h4>
+                                <p class="text-sm font-light text-gray-400">Accurate BOM (Bill of Materials) provided
+                                    before project kickoff. No surprise material shortages.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-gold/10 rounded flex items-center justify-center shrink-0 border border-gold/30">
+                                <i class="fa-solid fa-microscope text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Advanced Chemical Polishing</h4>
+                                <p class="text-sm font-light text-gray-400">We use imported epoxy resins, sealers, and
+                                    diamond abrasives to give your marble an everlasting mirror shine.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-gold/10 rounded flex items-center justify-center shrink-0 border border-gold/30">
+                                <i class="fa-solid fa-shield-halved text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Post-Project Warranty</h4>
+                                <p class="text-sm font-light text-gray-400">We stand by our work. Any hollowness or
+                                    improper joints are fixed free of charge under our warranty period.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex gap-4" data-aos="fade-left">
+                    <div class="flex flex-col gap-4 w-1/2">
+                        <img src="https://images.pexels.com/photos/221502/pexels-photo-221502.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            class="w-full h-48 md:h-64 object-cover rounded-sm border border-white/10 shadow-lg"
+                            alt="Marble Slab">
+                        <img src="https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            class="w-full h-48 md:h-64 object-cover rounded-sm border border-white/10 shadow-lg"
+                            alt="Architecture Structure">
+                    </div>
+                    <div class="flex flex-col gap-4 w-1/2 mt-8">
+                        <img src="https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            class="w-full h-48 md:h-64 object-cover rounded-sm border border-white/10 shadow-lg"
+                            alt="Tile tools">
+                        <img src="https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            class="w-full h-48 md:h-64 object-cover rounded-sm border border-white/10 shadow-lg"
+                            alt="Polishing finish">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Process Section -->
+    <section id="process" class="py-24 bg-secondary border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Methodology</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight">Our Work Process</h2>
+                <div class="w-24 h-2 bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div
+                    class="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-white/10 z-0 border-dashed border-t border-white/20">
+                </div>
+
+                <div class="text-center relative z-10 h-full flex flex-col group" data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="w-28 h-28 mx-auto bg-dark border-4 border-gold group-hover:bg-gold transition-colors duration-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                        <i
+                            class="fa-solid fa-compass-drafting text-4xl text-gold group-hover:text-dark transition-colors duration-500"></i>
+                    </div>
+                    <div
+                        class="bg-dark/50 p-6 rounded-sm border border-white/5 flex-grow flex flex-col hover:-translate-y-2 hover:border-gold/50 transition-all duration-300">
+                        <h4 class="text-xl font-heading font-bold mb-3 uppercase">1. Consultation</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed flex-grow">Detailed site visit, laser
+                            measurements, and drafting an accurate free quotation and timeline.</p>
+                    </div>
+                </div>
+
+                <div class="text-center relative z-10 h-full flex flex-col group" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-28 h-28 mx-auto bg-dark border-4 border-gold group-hover:bg-gold transition-colors duration-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                        <i
+                            class="fa-solid fa-swatchbook text-4xl text-gold group-hover:text-dark transition-colors duration-500"></i>
+                    </div>
+                    <div
+                        class="bg-dark/50 p-6 rounded-sm border border-white/5 flex-grow flex flex-col hover:-translate-y-2 hover:border-gold/50 transition-all duration-300">
+                        <h4 class="text-xl font-heading font-bold mb-3 uppercase">2. Material Selection</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed flex-grow">Guiding you to select
+                            premium grade,
+                            crack-free marble & high-durability tiles from our trusted vendors.</p>
+                    </div>
+                </div>
+
+                <div class="text-center relative z-10 h-full flex flex-col group" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="w-28 h-28 mx-auto bg-dark border-4 border-gold group-hover:bg-gold transition-colors duration-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                        <i
+                            class="fa-solid fa-trowel-bricks text-4xl text-gold group-hover:text-dark transition-colors duration-500"></i>
+                    </div>
+                    <div
+                        class="bg-dark/50 p-6 rounded-sm border border-white/5 flex-grow flex flex-col hover:-translate-y-2 hover:border-gold/50 transition-all duration-300">
+                        <h4 class="text-xl font-heading font-bold mb-3 uppercase">3. Execution</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed flex-grow">Precision bed leveling,
+                            chemical
+                            bonding, and seamless fitting executed by vetted master masons.</p>
+                    </div>
+                </div>
+
+                <div class="text-center relative z-10 h-full flex flex-col group" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="w-28 h-28 mx-auto bg-dark border-4 border-gold group-hover:bg-gold transition-colors duration-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                        <i
+                            class="fa-solid fa-check-to-slot text-4xl text-gold group-hover:text-dark transition-colors duration-500"></i>
+                    </div>
+                    <div
+                        class="bg-dark/50 p-6 rounded-sm border border-white/5 flex-grow flex flex-col hover:-translate-y-2 hover:border-gold/50 transition-all duration-300">
+                        <h4 class="text-xl font-heading font-bold mb-3 uppercase">4. Handover</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed flex-grow">Multi-stage mirror
+                            polishing,
+                            comprehensive site cleanup, final inspection, and fast handover.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (FIXED IMAGE LINKS) -->
+    <section id="projects" class="py-32 bg-dark relative z-10 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-aos="fade-up">
+                <div>
+                    <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Portfolio</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight">Our Recent
+                        Projects</h2>
+                </div>
+                <p class="text-gray-300 max-w-md text-right md:text-left font-light border-l-2 border-gold pl-4">Browse
+                    our collection of the latest commercial and residential flooring projects executing the highest
+                    standard of civil engineering.</p>
+            </div>
+
+            <!-- Fixed image quotes and formatting -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+                <!-- Large Item -->
+                <div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded-sm border border-white/10"
+                    data-aos="fade-up">
+                    <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Marble Flooring"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                        <div>
+                            <div class="w-10 h-1 bg-gold mb-4"></div>
+                            <h4 class="text-3xl font-heading font-bold text-white uppercase mb-2">Premium Italian Marble
+                            </h4>
+                            <p class="text-gold uppercase tracking-widest text-sm font-bold"><i
+                                    class="fa-solid fa-location-dot mr-2"></i>DHA Phase 6, Lahore</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tall Item -->
+                <div class="md:col-span-4 md:row-span-2 relative group overflow-hidden rounded-sm border border-white/10"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1"
+                        alt="Bathroom Tiling"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                        <div>
+                            <div class="w-10 h-1 bg-gold mb-4"></div>
+                            <h4 class="text-2xl font-heading font-bold text-white uppercase mb-2">Luxury Washroom</h4>
+                            <p class="text-gold uppercase tracking-widest text-sm font-bold"><i
+                                    class="fa-solid fa-droplet mr-2"></i>Waterproof Finish</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Item -->
+                <div class="md:col-span-6 relative group overflow-hidden rounded-sm border border-white/10"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1000&h=600&dpr=1"
+                        alt="Living Room Marble"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                        <div>
+                            <div class="w-10 h-1 bg-gold mb-4"></div>
+                            <h4 class="text-2xl font-heading font-bold text-white uppercase mb-2">Ceramic Living Floor
+                            </h4>
+                            <p class="text-gold uppercase tracking-widest text-sm font-bold"><i
+                                    class="fa-solid fa-building mr-2"></i>Commercial Plaza</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Item -->
+                <div class="md:col-span-6 relative group overflow-hidden rounded-sm border border-white/10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/221502/pexels-photo-221502.jpeg?auto=compress&cs=tinysrgb&w=1000&h=600&dpr=1"
+                        alt="Staircase Polishing"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                        <div>
+                            <div class="w-10 h-1 bg-gold mb-4"></div>
+                            <h4 class="text-2xl font-heading font-bold text-white uppercase mb-2">Granite Staircase Step
+                                Fitting</h4>
+                            <p class="text-gold uppercase tracking-widest text-sm font-bold"><i
+                                    class="fa-solid fa-ruler-combined mr-2"></i>Attention to Detail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-secondary border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20">
+                <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Client Feedback</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight">What Our Clients Say
+                </h2>
+                <div class="w-24 h-2 bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <!-- Bootstrap Carousel for Testimonials -->
+            <div id="testimonialCarousel" class="carousel slide max-w-4xl mx-auto" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Item 1 -->
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div
+                            class="text-center px-8 md:px-20 bg-dark/30 p-12 rounded-lg border border-white/5 relative">
+                            <i class="fa-solid fa-quote-left text-6xl text-gold absolute top-4 left-4 opacity-10"></i>
+                            <h3 class="text-lg md:text-xl font-light leading-relaxed mb-8 italic">"One of the best
+                                experiences we've ever had. The attention to detail in their marble fitting is
+                                unmatched, and the final mirror finish of our new office is simply top-notch."</h3>
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <h4 class="text-white font-heading font-bold uppercase tracking-widest text-sm">Ahmed
+                                    Raza</h4>
+                                <p class="text-gold text-xs font-bold uppercase">Commercial Client, Gulberg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div
+                            class="text-center px-8 md:px-20 bg-dark/30 p-12 rounded-lg border border-white/5 relative">
+                            <i class="fa-solid fa-quote-left text-6xl text-gold absolute top-4 left-4 opacity-10"></i>
+                            <h3 class="text-lg md:text-xl font-light leading-relaxed mb-8 italic">"Finally found an
+                                engineering team that understands exactly what is required. They transformed our home
+                                floors completely, avoided material wastage, and delivered strictly on time."</h3>
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <h4 class="text-white font-heading font-bold uppercase tracking-widest text-sm">Bilal
+                                    Khan</h4>
+                                <p class="text-gold text-xs font-bold uppercase">Homeowner, DHA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators -bottom-16">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" style="background-color: #eab308;"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                        style="background-color: #eab308;"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (New) -->
+    <section id="faq" class="py-24 bg-dark border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold text-sm font-bold tracking-[0.3em] uppercase block mb-4">Queries</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-black uppercase tracking-tight">Frequently Asked
+                    Questions</h2>
+            </div>
+
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-secondary rounded-sm border border-white/10 overflow-hidden faq-wrapper">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-3 font-heading font-bold text-lg flex justify-between items-center hover:bg-gold hover:text-dark text-white transition-colors duration-300"
+                        onclick="toggleFaq(this)">
+                        Do you provide the materials or just labor?
+                        <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-dark">
+                        <div class="p-6 text-gray-300 font-light text-sm leading-relaxed border-t border-white/5">
+                            We offer both options. We provide "With Material" contracts where we procure premium marble,
+                            cement, and chemicals on your behalf to guarantee quality. Alternatively, we also offer
+                            "Labor Rate" contracts if you prefer to purchase the tiles yourself.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-sm border border-white/10 overflow-hidden faq-wrapper">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-3 font-heading font-bold text-lg flex justify-between items-center hover:bg-gold hover:text-dark text-white transition-colors duration-300"
+                        onclick="toggleFaq(this)">
+                        How long does a standard house marble flooring take?
+                        <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-dark">
+                        <div class="p-6 text-gray-300 font-light text-sm leading-relaxed border-t border-white/5">
+                            For a standard 1 Kanal house, the base leveling and fitting process usually takes 2-3 weeks
+                            depending on the design geometry. Chemical polishing requires an additional 5-7 days for a
+                            100% mirror finish. We provide a firm timeline upfront.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-sm border border-white/10 overflow-hidden faq-wrapper">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-3 font-heading font-bold text-lg flex justify-between items-center hover:bg-gold hover:text-dark text-white transition-colors duration-300"
+                        onclick="toggleFaq(this)">
+                        What areas in Lahore do you cover?
+                        <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-dark">
+                        <div class="p-6 text-gray-300 font-light text-sm leading-relaxed border-t border-white/5">
+                            Our head office is in DHA Lahore. We provide our premium tile and marble fitting services
+                            across all major locations in Lahore including DHA, Bahria Town, Gulberg, Model Town, Johar
+                            Town, and Lake City. For massive commercial projects, we are open to traveling outside
+                            Lahore.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-20 bg-gold relative overflow-hidden">
+        <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none mix-blend-multiply"></div>
+        <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-heading font-black text-dark uppercase mb-6 drop-shadow-sm">Ready to
+                build your dream space?</h2>
+            <p class="text-slate-800 text-lg md:text-xl font-bold mb-10 max-w-2xl mx-auto">Get in touch with our
+                engineers today for a free site inspection, laser measurement, and an accurate quotation with ZERO
+                hidden costs.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#contact"
+                    class="bg-dark text-white px-10 py-4 uppercase font-bold tracking-widest text-sm hover:bg-white hover:text-dark transition-colors duration-300 shadow-xl border border-transparent">Contact
+                    Us Now</a>
+                <a href="https://wa.me/923004098506" target="_blank"
+                    class="border-2 border-dark text-dark px-10 py-4 uppercase font-bold tracking-widest text-sm hover:bg-dark hover:text-gold transition-colors duration-300 flex items-center justify-center gap-3"><i
+                        class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark pt-24 pb-8 border-t border-white/10 relative z-10">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+                <!-- Brand -->
+                <div data-aos="fade-up">
+                    <a href="#"
+                        class="text-3xl font-heading font-black tracking-widest mb-6 block text-white uppercase flex items-center gap-3">
+                        <!-- <i class="fa-solid fa-helmet-safety text-gold text-3xl"></i> -->
+                        <img src="logo.png" alt="MS Stoneline Logo"
+                            class="h-10 md:h-12 w-auto object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-105">
+                        <span>MS <span class="text-gold">STONELINE</span></span>
+                    </a>
+                    <p class="text-gray-400 font-light text-sm mb-8 leading-relaxed max-w-sm">Where structural integrity
+                        meets elegant design. Experience the benchmark of civil engineering, tile, and marble
+                        craftsmanship in Lahore.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-sm border border-white/20 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-dark transition-all shadow-md"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-sm border border-white/20 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-dark transition-all shadow-md"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-sm border border-white/20 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-dark transition-all shadow-md"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4
+                        class="text-lg font-heading font-bold mb-8 text-white uppercase tracking-widest border-l-4 border-gold pl-3">
+                        Contact Desk</h4>
+                    <ul class="text-gray-400 font-light text-sm space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-gold text-lg"></i>
+                            <span class="leading-relaxed">DHA Phase 6, Lahore,<br>Punjab, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-gold text-lg"></i>
+                            <a href="tel:03004098506"
+                                class="hover:text-gold transition-colors font-bold tracking-wider text-white">+92 300
+                                4098506</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-gold text-lg"></i>
+                            <a href="mailto:msstoneline@gmail.com"
+                                class="hover:text-gold transition-colors block border-b border-transparent hover:border-gold pb-1">msstoneline@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fast Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4
+                        class="text-lg font-heading font-bold mb-8 text-white uppercase tracking-widest border-l-4 border-gold pl-3">
+                        Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <ul class="text-gray-400 font-light text-sm space-y-4">
+                            <li><a href="#about"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> About Firm</a></li>
+                            <li><a href="#services"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> Core Services</a>
+                            </li>
+                            <li><a href="#projects"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> Portfolio</a></li>
+                        </ul>
+                        <ul class="text-gray-400 font-light text-sm space-y-4">
+                            <li><a href="#process"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> Methodology</a></li>
+                            <li><a href="#faq"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> FAQs</a></li>
+                            <li><a href="#contact"
+                                    class="hover:text-gold transition-all block translate-x-0 hover:translate-x-1"><i
+                                        class="fa-solid fa-angle-right text-gold mr-2 text-xs"></i> Get Quote</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col items-center gap-4 text-center">
+                <div class="text-gray-500 text-xs tracking-[0.2em] uppercase font-bold">
+                    &copy; 2026 MS STONELINE | REGISTERED CIVIL ENGINEERING WORKS.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923004098506" target="_blank"
+        class="fixed bottom-6 left-6 z-[100] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 group">
+        <i class="fa-brands fa-whatsapp group-hover:rotate-12 transition-transform"></i>
+        <!-- Ping animation -->
+        <span
+            class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping -z-10 group-hover:hidden"></span>
+    </a>
+
+    <!-- Scroll To Top -->
+    <button id="scrollToTopBtn"
+        class="fixed bottom-6 right-6 z-[100] bg-gold text-dark w-12 h-12 rounded-sm flex items-center justify-center text-xl shadow-lg hover:-translate-y-2 hover:bg-white transition-all duration-300 opacity-0 invisible translate-y-10 border border-transparent hover:border-dark">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Initialization for AOS (if main.js fails)
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ once: true, offset: 50 });
+            }
+
+            // Custom FAQ Toggle Script
+            window.toggleFaq = function (btn) {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = content.style.maxHeight;
+
+                document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
+                document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+                document.querySelectorAll('.faq-btn').forEach(b => {
+                    b.classList.remove('bg-gold', 'text-dark');
+                    b.classList.add('text-white');
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.add('rotate-180');
+                    btn.classList.add('bg-gold', 'text-dark');
+                    btn.classList.remove('text-white');
+                }
+            };
+
+            // Mobile Menu Fix
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('translate-x-full');
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-xmark');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('translate-x-full');
+                        mobileBtn.querySelector('i').classList.add('fa-bars');
+                        mobileBtn.querySelector('i').classList.remove('fa-xmark');
+                    });
+                });
+            }
+
+            // Scroll to top button visibility
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+            if (scrollBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        scrollBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+                    } else {
+                        scrollBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+                    }
+                });
+                scrollBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Number Counter Animation via Intersection Observer
+            const statsSection = document.getElementById('stats-section');
+            const counters = document.querySelectorAll('.counter');
+            let countersStarted = false;
+
+            if (statsSection && counters.length > 0) {
+                const observerOptions = {
+                    root: null,
+                    threshold: 0.3
+                };
+
+                const statObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !countersStarted) {
+                            countersStarted = true;
+
+                            counters.forEach(counter => {
+                                const target = +counter.getAttribute('data-target');
+                                const duration = 2000; // 2 ms
+                                // Determine frame increment based on approx 60fps
+                                const increment = target / (duration / 16);
+                                let current = 0;
+
+                                const updateCounter = () => {
+                                    current += increment;
+                                    if (current < target) {
+                                        counter.innerText = Math.ceil(current);
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        counter.innerText = target;
+                                    }
+                                };
+                                updateCounter();
+                            });
+                        }
+                    });
+                }, observerOptions);
+
+                statObserver.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+
+</html>
